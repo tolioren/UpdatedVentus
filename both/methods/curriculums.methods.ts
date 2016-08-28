@@ -1,5 +1,5 @@
 import { UploadFS } from 'meteor/jalik:ufs';
-import { ImagesStore } from '../collections/images.collection';
+import { CurriculumsStore } from '../collections/curriculums.collection';
 
 export function upload(data: File): Promise<any> {
   return new Promise((resolve, reject) => {
@@ -13,12 +13,10 @@ export function upload(data: File): Promise<any> {
     const upload = new UploadFS.Uploader({
       data,
       file,
-      store: ImagesStore,
+      store: CurriculumsStore,
       onError: reject,
       onComplete: resolve
     });
     upload.start();
   });
 }
-
-

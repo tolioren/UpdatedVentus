@@ -24,7 +24,7 @@ export class PartiesList extends MeteorComponent implements OnInit {
   constructor(private paginationService: PaginationService) {
     super();
   }
-
+  
   ngOnInit() {
     this.paginationService.register({
       id: this.paginationService.defaultId,

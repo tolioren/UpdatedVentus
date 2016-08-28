@@ -14,14 +14,16 @@ import { METEOR_PROVIDERS } from 'angular2-meteor';
 
 import { routing } from './routes';
 import { LoginComponent } from './login.web.component';
-import { SignupComponent } from './signup.component';
+import { CompanySignupComponent } from './company-signup.component';
+import { TechnicianSignupComponent } from './technician-signup.component';
 import { RecoverComponent } from './recover.component';
 
 
 @NgModule({
     declarations: [
         LoginComponent,
-        SignupComponent,
+        CompanySignupComponent,
+        TechnicianSignupComponent,
         RecoverComponent
     ],
     imports: [
@@ -44,7 +46,8 @@ import { RecoverComponent } from './recover.component';
     ],
     exports: [
         LoginComponent,
-        SignupComponent,
+        CompanySignupComponent,
+        TechnicianSignupComponent,
         RecoverComponent
     ]
 })

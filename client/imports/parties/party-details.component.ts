@@ -122,8 +122,8 @@ export class PartyDetailsComponent extends MeteorComponent implements OnInit {
 
   mapClicked($event: MouseEvent) {
     //noinspection TypeScriptUnresolvedVariable
-    this.party.location.lat = $event.coords.lat;
-    //noinspection TypeScriptUnresolvedVariable
-    this.party.location.lng = $event.coords.lng;
+    // this.party.location.lat = $event.coords.lat;
+    // //noinspection TypeScriptUnresolvedVariable
+    // this.party.location.lng = $event.coords.lng;
   }
 }

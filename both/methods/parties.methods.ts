@@ -34,7 +34,8 @@ Meteor.methods({
 
       if (Meteor.isServer && to) {
         Email.send({
-          from: 'noreply@socially.com',
+          //our mail here
+          from: 'noreply@ventus.com',
           to: to,
           replyTo: from || undefined,
           subject: 'PARTY: ' + party.name,

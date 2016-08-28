@@ -1,9 +1,7 @@
-
-
 import { Component } from '@angular/core';
 import { MeteorComponent } from 'angular2-meteor';
 import { Meteor } from 'meteor/meteor';
-import {InjectUser} from 'angular2-meteor-accounts-ui';
+import { InjectUser } from 'angular2-meteor-accounts-ui';
 import { DisplayNamePipe } from './imports/shared/display-name.pipe';
 
 import template from './app.web.component.html';

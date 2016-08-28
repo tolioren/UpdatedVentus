@@ -26,7 +26,7 @@ export class PartiesFormComponent implements OnInit {
       public: [false]
     });
   }
-
+  
   resetForm() {
     this.addForm.controls['name']['updateValue']('');
     this.addForm.controls['description']['updateValue']('');

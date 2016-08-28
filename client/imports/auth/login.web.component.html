@@ -3,9 +3,9 @@
     <md-toolbar class="md-primary" color="primary">
       Sign in
     </md-toolbar>
-
-    <div layout="column" layout-fill layout-margin layout-padding>
-      <div layout="row" layout-fill layout-margin>
+<!-- layout fill was taking away from the the divs-->
+    <div layout="column" layout-margin layout-padding>
+      <div layout="row" layout-margin>
         <p class="md-body-2"> Sign in with your email</p>
       </div>
 
@@ -30,7 +30,8 @@
       <md-divider></md-divider>
 
       <div layout="row" layout-align="center">
-        <a md-button [routerLink]="['/signup']">Need an account?</a>
+        <a md-button [routerLink]="['/technician-signup']">Need a Technician Account?</a>
+        <a md-button [routerLink]="['/company-signup']">Need a Company Account?</a>
       </div>
     </div>
   </md-whiteframe>

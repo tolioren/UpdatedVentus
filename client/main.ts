@@ -14,16 +14,16 @@ import {AppModule} from './app.module';
 import 'angular2-meteor-accounts-ui/build/login-buttons.scss';
 import 'ng2-material/core.scss';
 
-// if (Meteor.isCordova) {
-//   document.addEventListener('deviceready', () => {
-//     ionicSelector('app');
-//     runMobile();
-//     setClass('mobile');
-//   });
-// } else {
-//   runWeb();
-//   setClass('web');
-// }
+if (Meteor.isCordova) {
+  document.addEventListener('deviceready', () => {
+    ionicSelector('app');
+    runMobile();
+    setClass('mobile');
+  });
+} else {
+  runWeb();
+  setClass('web');
+}
 
 runWeb();
 
@@ -32,11 +32,11 @@ function runWeb() {
         .catch((err: any) => console.error(err));
 }
 
-// function runMobile() {
-//   ionicBootstrap(AppMobileComponent, [
-//     METEOR_PROVIDERS
-//   ]);
-// }
+function runMobile() {
+  ionicBootstrap(AppMobileComponent, [
+    METEOR_PROVIDERS
+  ]);
+}
 
 function setClass(css) {
   if (!document.body.className) {

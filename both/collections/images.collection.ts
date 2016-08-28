@@ -44,9 +44,10 @@ Thumbs.allow({
   update: loggedIn,
   remove: loggedIn
 });
-
+ 
 Images.allow({
   insert: loggedIn,
   update: loggedIn,
   remove: loggedIn
 });
+
