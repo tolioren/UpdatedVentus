@@ -1,0 +1,139 @@
+<!-- <md-content layout="row" layout-align="center start" layout-fill layout-margin>
+  <md-whiteframe layout="column" flex flex-md="50" flex-lg="50" flex-gt-lg="33" class="md-whiteframe-z2" layout-fill>
+    <md-toolbar class="md-primary" color="primary">
+      Technician Sign up
+    </md-toolbar>
+
+    <div layout="column" layout-fill layout-margin layout-padding>
+      <form [formGroup]="signupForm" #f="ngForm" (ngSubmit)="signup()"
+        layout="column" layout-fill layout-padding layout-margin>
+
+        <md-input formControlName="email" type="email" placeholder="Email"></md-input>
+        <md-input formControlName="password" type="password" placeholder="Password"></md-input>
+
+        <div layout="row" layout-align="space-between center">
+          <button md-raised-button class="md-primary" type="submit" aria-label="login">Sign Up</button>
+        </div>
+      </form>
+
+      <div [hidden]="error == ''">
+        <md-toolbar class="md-warn" layout="row" layout-fill layout-padding layout-margin>
+          <p class="md-body-1">{{ error }}</p>
+        </md-toolbar>
+      </div>
+
+      <md-divider></md-divider>
+
+      <div layout="row" layout-align="center">
+        <a md-button [routerLink]="['/login']">Already a user?</a>
+      </div>
+    </div>
+  </md-whiteframe>
+</md-content> -->
+<!-- add cv holder -->
+<!-- picture holder -->
+<!-- qualification -->
+<md-card class="demo-card demo-basic">
+  <md-toolbar color="primary">Technician Sign Up</md-toolbar>
+  <md-card-content>
+    <form>
+      <table style="width: 80%" cellspacing="0"><tr>
+        <!-- drop down list through all the companies-->
+        <!-- <td><md-input class="demo-full-width" placeholder="Company">
+        </md-input></td> -->
+        <td><md-input type="first_name" placeholder="First name" style="width: 50%"></md-input></td>
+        <td><md-input type="last_name" placeholder="Last Name" style="width: 50%"></md-input></td>
+
+        <td><md-input type="email" placeholder="Email" style="width: 50%"></md-input></td>
+
+      </tr></table>
+      
+        <table style="width: 100%" cellspacing="0"><tr>
+        <td><md-input class="demo-full-width" type="user_name" placeholder="User Name" style="width: 50%"></md-input></td>
+        <td><md-input class="demo-full-width" type="password" placeholder="Password" style="width: 50%"></md-input></td>
+        <td>
+        <td><md-input class="demo-full-width" type="password" placeholder="Retype Password" style="width: 50%"></md-input></td>
+        <td>
+          <label>
+            <input #freelancer name="freelancer" type="radio" value="Freelancer" (click)="worktype = freelancer.value"/>
+            Freelancer
+          </label>
+          <label>
+            <input #companywork name="freelancer" type="radio"  value="CompanyWorker" (click)="worktype = companywork.value" />
+            Company Worker
+          </label>
+        </td>
+        <td>
+            <md-input [hidden] placeholder="Employer" style="width: 50%"></md-input>
+        </td>
+      </tr></table>
+      <table style="width: 80%" cellspacing="0">
+        <tr>
+          <td>
+            <div class="input-controls">
+              <h4>Select your qualifications</h4>
+              <div>
+                <label>
+                  <input #level1cb type="checkbox" (change)="level1 = level1cb.checked" />
+                        Level 1
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input #level2cb type="checkbox" (change)="level2 = level2cb.checked" />
+                        Level 2
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input #level3cb type="checkbox" (change)="level3 = level3cb.checked" />
+                        Level 3
+                </label>
+              </div>
+            </div>
+          </td>
+          <td>
+          <label>
+            <input #male name="gender" type="radio" value="Male" (click)="gender = male.value"/>
+            Male
+          </label>
+          <label>
+            <input #female name="gender" type="radio"  value="Female" (click)="gender = female.value" />
+            Female
+          </label>
+        </td>
+        <td>
+            <curriculum-upload #upload (onFile)="onCorriculum($event)"></curriculum-upload>
+          </td>
+        
+        </tr>
+      </table>
+      <p>
+        <md-input type="address" class="demo-full-width" placeholder="Address" style="width: 50%""></md-input>
+        <md-input type="telephone_numer" class="demo-full-width" placeholder="Telephone number" info="{type: 'telephone'}" style="width: 50%""></md-input>
+      </p>
+      <table style="width: 100%" cellspacing="0"><tr>
+        <td><md-input type="city" class="demo-full-width" placeholder="City"></md-input></td>
+        <td><md-input type="state" class="demo-full-width" placeholder="State"></md-input></td>
+        <td><md-input #postalCode type="postal" class="demo-full-width" maxLength="5"
+                      placeholder="Postal Code"
+                      value="">
+          <md-hint align="end">{{postalCode.characterCount}} / 5</md-hint>
+        </md-input></td>
+      </tr></table>
+    </form>
+    
+  </md-card-content>
+</md-card>
+
+<div [hidden]="error == ''">
+  <md-toolbar class="md-warn" layout="row" layout-fill layout-padding layout-margin>
+    <p class="md-body-1">{{ error }}</p>
+  </md-toolbar>
+</div>
+
+<md-divider></md-divider>
+
+<div layout="row" layout-align="center">
+  <a md-button [routerLink]="['/login']">Already a user?</a>
+</div>

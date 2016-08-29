@@ -1,0 +1,77 @@
+<!-- <md-content layout="row" layout-align="center start" layout-fill layout-margin>
+  <md-whiteframe layout="column" flex flex-md="50" flex-lg="50" flex-gt-lg="33" class="md-whiteframe-z2" layout-fill>
+    <md-toolbar class="md-primary" color="primary">
+      Company Sign up
+    </md-toolbar>
+
+    <div layout="column" layout-fill layout-margin layout-padding>
+      <form [formGroup]="signupForm" #f="ngForm" (ngSubmit)="signup()"
+        layout="column" layout-fill layout-padding layout-margin>
+
+        <md-input formControlName="email" type="email" placeholder="Email"></md-input>
+        <md-input formControlName="password" type="password" placeholder="Password"></md-input>
+        <div ng-controller="AppCtrl as ctrl" class="md-padding" ng-cloak layout="column">
+
+            
+        <div ng-controller="SelectAsyncController" layout="column" layout-align="center center" style="padding:40px" ng-cloak>
+          <p>Select can call an arbitrary function on show. If this function returns a promise, it will display a loading indicator while it is being resolved:</p>
+          <div layout="column" layout-align="center center">
+            <md-select placeholder="Assign to user" ng-model="user" md-on-open="loadUsers()" style="min-width: 200px;">
+              <md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+            </md-select>
+            <p class="md-caption">You have assigned the task to: {{ user ? user.name : 'No one yet' }}</p>
+          </div>
+        </div>
+
+        <div layout="row" layout-align="space-between center">
+          <button md-raised-button class="md-primary" type="submit" aria-label="login">Sign Up</button>
+        </div>
+      </form>
+
+      <div [hidden]="error == ''">
+        <md-toolbar class="md-warn" layout="row" layout-fill layout-padding layout-margin>
+          <p class="md-body-1">{{ error }}</p>
+        </md-toolbar>
+      </div>
+
+      <md-divider></md-divider>
+
+      <div layout="row" layout-align="center">
+        <a md-button [routerLink]="['/login']">Already a user?</a>
+      </div>
+    </div>
+  </md-whiteframe>
+</md-content>
+
+
+
+ -->
+
+ <md-card class="demo-card demo-basic">
+  <md-toolbar color="primary">Cooperation Sign Up</md-toolbar>
+  <md-card-content>
+    <form>
+ 
+      <table style="width: 100%" cellspacing="0"><tr>
+        <td><md-input type="code" placeholder="Company Code" style="width: 93%"></md-input></td>
+      </tr></table>
+      <table style="width: 100%" cellspacing="0"><tr>
+        <td><md-input type="email" placeholder="Email" style="width: 80%"></md-input></td>
+        <td><md-input type="password" placeholder="Password" style="width: 80%"></md-input></td>
+        <td><md-input type="password" placeholder="Retype Password" style="width: 80%"></md-input></td>
+      </tr></table>
+    </form>
+  </md-card-content>
+</md-card>
+
+<div [hidden]="error == ''">
+  <md-toolbar class="md-warn" layout="row" layout-fill layout-padding layout-margin>
+    <p class="md-body-1">{{ error }}</p>
+  </md-toolbar>
+</div>
+
+<md-divider></md-divider>
+
+<div layout="row" layout-align="center">
+  <a md-button [routerLink]="['/login']">Already got a user?</a>
+</div>
